@@ -1,39 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Photo Album</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GALLERY</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="Albumfoto">
-      <div class="photo1">
-            <img src="flower (19).jpeg" width="250px" height="300px" />
-            <img src="flower (20).jpeg" width="250px" height="300px" />
-            <img src="flower (21).jpeg" width="250px" height="300px" />
-            <img src="flower (22).jpeg" width="250px" height="300px" />
-            <div class="caption">terkini</div> 
-        </div>
-          <div class="photo2"></div>
-            <img src="flower (23).jpeg" width="250px" height="300px" />
-            <img src="flower (24).jpeg" width="250px" height="300px" />
-            <img src="flower (25).jpeg" width="250px" height="300px" />
-            <img src="flower (26).jpeg" width="250px" height="300px" />
-          <div class="caption">camera</div>
-        </div>
-          <div class="photo3">
-            <img src="flower (27).jpeg" width="250px" height="300px" />
-            <img src="flower (28).jpeg" width="250px" height="300px" />
-            <img src="flower (29).jpeg" width="250px" height="300px" />
-            <img src="flower (30).jpeg" width="250px" height="300px" />
-          <div class="caption">intagram</div>
-        </div>
-          <div class="photo4">
-            <img src="flower (31).jpeg" width="250px" height="300px" />
-            <img src="flower (32).jpeg" width="250px" height="300px" />
-            <img src="flower (33).jpeg" width="250px" height="300px" />
-            <img src="flower (35).jpeg" width="250px" height="300px" />
-          </div class="caption">download</div>
-      <div>
-      </div>
+    <div class="full-Img" id="fullImgBox">
+      <img src="img1.jpg" id="fullImg" />
+      <span onclick="closeFullImg()">X</span>
+    </div>
+    <div class="img-gallery">
+      <img src="img1.jpg" width="250px" height="350px" onclick="openFullImg(this.src)" />
+      <img src="img2.jpg" width="250px" height="350px" onclick="openFullImg(this.src)" />
+      <img src="img3.jpeg" width="250px" height="350px" onclick="openFullImg(this.src)" />
+      <img src="img4.jpeg" width="250px" height="350px" onclick="openFullImg(this.src)" />
+      <img src="img5.jpeg" width="250px" height="350px" onclick="openFullImg(this.src)" />
+      <img src="img6.jpg" width="250px" height="350px" onclick="openFullImg(this.src)" />
+      <img src="img7.jpg" width="250px" height="350px" onclick="openFullImg(this.src)" />
+      <img src="img8.jpeg" width="250px" height="350px" onclick="openFullImg(this.src)" />
+    </div>
+
+    <script>
+      var fullImgBox = document.getElementById('fullImgBox');
+      var fullImg = document.getElementById('fullImg');
+
+      function openFullImg(pic) {
+        fullImgBox.style.display = 'flex';
+        fullImg.src = pic;
+      }
+
+      function closeFullImg() {
+        fullImgBox.style.display = 'none';
+      }
+    </script>
   </body>
 </html>
